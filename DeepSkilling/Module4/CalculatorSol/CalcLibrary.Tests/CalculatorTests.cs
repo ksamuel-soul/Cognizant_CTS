@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CalcLibrary;
+using NUnit.Framework.Legacy;
 
 namespace CalcLibrary.Tests;
 
@@ -14,52 +15,77 @@ public class CalculatorTests
         calculator = new Calculator();
     }
 
-    [TearDown]
-    public void Cleanup()
+    [TestCase(20,10,10)]
+    [TestCase(15,5,10)]
+    [TestCase(-10,-5,-5)]
+    [TestCase(100,50,50)]
+    public void TestSubtract(int a,int b,int expected)
     {
-        calculator = null;
+        int actual = calculator.Subtract(a,b);
+
+        ClassicAssert.AreEqual(expected, actual);
     }
 
-    [TestCase(2, 3, 5)]
-    [TestCase(10, 20, 30)]
-    [TestCase(-5, 5, 0)]
-    [TestCase(100, 200, 300)]
-    public void AddTest(int a, int b, int expected)
+    [TestCase(2,3,6)]
+    [TestCase(5,10,50)]
+    [TestCase(-2,4,-8)]
+    [TestCase(10,0,0)]
+    public void TestMultiply(int a,int b,int expected)
     {
-        int actual = calculator.Add(a, b);
+        int actual = calculator.Multiply(a,b);
 
-        Assert.That(actual, Is.EqualTo(expected));
+        ClassicAssert.AreEqual(expected, actual);
     }
 
-    [Test]
-    public void SubtractTest()
+    [TestCase(20,5,4)]
+    [TestCase(100,10,10)]
+    [TestCase(25,5,5)]
+    public void TestDivide(int a,int b,int expected)
     {
-        Assert.That(calculator.Subtract(20, 5), Is.EqualTo(15));
-    }
+        int actual = calculator.Divide(a,b);
 
-    [Test]
-    public void MultiplyTest()
-    {
-        Assert.That(calculator.Multiply(10, 5), Is.EqualTo(50));
-    }
-
-    [Test]
-    public void DivideTest()
-    {
-        Assert.That(calculator.Divide(20, 5), Is.EqualTo(4));
+        ClassicAssert.AreEqual(expected, actual);
     }
 
     [Test]
-    public void DivideByZeroTest()
+    public void TestDivideByZero()
     {
-        Assert.Throws<DivideByZeroException>(() =>
+        try
         {
-            calculator.Divide(20, 0);
+            calculator.Divide(20,0);
+
+            Assert.Fail("Division by zero");
+        }
+        catch(ArgumentException ex)
+        {
+            ClassicAssert.AreEqual("Division by zero", ex.Message);
+            ClassicAssert.AreEqual(typeof(ArgumentException), ex.GetType());
+        }
+    }
+
+    [Test]
+    public void TestAddAndClear()
+    {
+        int actual = calculator.Add(10,20);
+
+        ClassicAssert.AreEqual(30, actual);
+
+        calculator.AllClear();
+
+        ClassicAssert.AreEqual(0, calculator.GetResult);
+    }
+
+    [Test]
+    public void TestAssertionException()
+    {
+        Assert.Throws<AssertionException>(() =>
+        {
+            ClassicAssert.AreEqual(10, 20);
         });
     }
 
     [Test]
-    [Ignore("Example Ignore Attribute")]
+    [Ignore("Example Ignore")]
     public void FutureTest()
     {
     }
