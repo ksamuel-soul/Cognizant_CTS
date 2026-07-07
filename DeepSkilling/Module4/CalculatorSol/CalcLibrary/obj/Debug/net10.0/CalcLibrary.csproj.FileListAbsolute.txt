@@ -1,0 +1,12 @@
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/bin/Debug/net10.0/CalcLibrary.deps.json
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/bin/Debug/net10.0/CalcLibrary.dll
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/bin/Debug/net10.0/CalcLibrary.pdb
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.AssemblyInfoInputs.cache
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.AssemblyInfo.cs
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.csproj.CoreCompileInputs.cache
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.sourcelink.json
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.dll
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/refint/CalcLibrary.dll
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/CalcLibrary.pdb
+/Users/samuelebenezer/CTS_Digital_Nurture_2026/DeepSkilling/Module4/CalculatorSol/CalcLibrary/obj/Debug/net10.0/ref/CalcLibrary.dll
